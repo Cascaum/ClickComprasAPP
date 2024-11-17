@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "412251136691",
+    "project_id": "clickcomprasapp",
+    "storage_bucket": "clickcomprasapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412251136691:android:400155b657e2d0c6d4c6c6",
+        "android_client_info": {
+          "package_name": "com.example.clickcompras"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "412251136691-bv08k39l4vo8sfq11qf2b2ri8sm0gp92.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.clickcompras",
+            "certificate_hash": "272d4482688afe86d6a7b14ef544f2edf3666dd2"
+          }
+        },
+        {
+          "client_id": "412251136691-lv7j2dj3ofmhlie7p38mip2v7qe7fkuo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMq1YF59XoaQw1YVHWftTy-lhUbB4jux8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "412251136691-lv7j2dj3ofmhlie7p38mip2v7qe7fkuo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "412251136691-93lm0cjbenq1bhf0ld8464eumgnov04v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.clickcompras"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
