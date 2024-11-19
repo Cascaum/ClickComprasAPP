@@ -9,6 +9,7 @@ class AddressModel {
   final String street;
   final String city;
   final String state;
+  final String numberHouse;
   final String postalCode;
   final String country;
   final DateTime? dateTime;
@@ -21,6 +22,7 @@ class AddressModel {
     required this.street,
     required this.city,
     required this.state,
+    required this.numberHouse,
     required this.postalCode,
     required this.country,
     this.dateTime,
@@ -29,16 +31,7 @@ class AddressModel {
 
   String get formattedPhoneNo => TFormatter.formatPhoneNumber(phoneNumber);
 
-  static AddressModel empty() => AddressModel(
-    id: '',
-    name: '',
-    phoneNumber: '',
-    street: '',
-    city: '',
-    state: '',
-    postalCode: '',
-    country: '',
-  );
+  static AddressModel empty() => AddressModel(id: '', name: '', phoneNumber: '', street: '', city: '', state: '', numberHouse: '', postalCode: '', country: '',);
 
   Map<String, dynamic> toJson() {
     return {
@@ -48,6 +41,7 @@ class AddressModel {
       'Street': street,
       'City': city,
       'State': state,
+      'NumberHouse': numberHouse,
       'PostalCode': postalCode,
       'Country': country,
       'DateTime': DateTime.now(),
@@ -63,6 +57,7 @@ class AddressModel {
       street: data['Street'] as String,
       city: data['City'] as String,
       state: data['State'] as String,
+      numberHouse: data['NumberHouse'] as String,
       postalCode: data['PostalCode'] as String,
       country: data['Country'] as String,
       selectedAddress: data['SelectedAddress'] as bool,
@@ -80,6 +75,7 @@ class AddressModel {
       street: data['Street'] ?? '',
       city: data['City'] ?? '',
       state: data['State'] ?? '',
+      numberHouse: data['NumberHouse'] ?? '',
       postalCode: data['PostalCode'] ?? '',
       country: data['Country'] ?? '',
       dateTime: (data['DateTime'] as Timestamp).toDate(),
@@ -89,6 +85,6 @@ class AddressModel {
 
   @override
   String toString() {
-    return '$street, $city, $state, $postalCode, $country';
+    return '$street, $city, $state, $postalCode, $numberHouse, $country';
   }
 }

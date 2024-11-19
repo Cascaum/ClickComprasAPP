@@ -25,7 +25,7 @@ class ProductDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: const TBottomAddToCart(),
+      bottomNavigationBar: TBottomAddToCart(product: product),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -42,8 +42,8 @@ class ProductDetailScreen extends StatelessWidget {
                   if (product.productType == ProductType.variable.toString()) const SizedBox(height: TSizes.spaceBtwSections),
 
 
-                  SizedBox(width: double.infinity, child: ElevatedButton(onPressed: (){}, child: const Text('Escolher'))),
-                  const SizedBox(height: TSizes.spaceBtwSections),
+                  // SizedBox(width: double.infinity, child: ElevatedButton(onPressed: (){}, child: const Text('Escolher'))),
+                  // const SizedBox(height: TSizes.spaceBtwSections),
 
                   const TSectionHeading(title: 'Descrição', showActionButton: false),
                   const SizedBox(height: TSizes.spaceBtwItems),

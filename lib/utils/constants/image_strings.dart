@@ -32,7 +32,8 @@ class TImages {
   static const String successfullyRegisterAnimation = "assets/images/animations/successfullyRegisterAnimation.png";
   static const String doceranimation = "assets/images/animations/doceranimation.json";
   static const String pencilAnimation = "assets/images/animations/140429-pencil-drawing.json";
-
+  static const String cartAnimation = "assets/images/animations/136491-animation-lottie-car-rides.json";
+  static const String orderCompletedAnimation = "assets/images/animations/order-complete-car-delivery-animation.json";
 
   // -- Category Icons
   static const String sportIcon = "assets/icons/categories/icons8-bowling-64.png";

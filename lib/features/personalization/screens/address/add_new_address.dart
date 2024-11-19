@@ -25,7 +25,7 @@ class AddNewAddressScreen extends StatelessWidget {
               children: [
                 TextFormField(
                   controller: controller.name,
-                  validator: (value) => TValidator.validateEmptyText('Name', value),
+                  validator: (value) => TValidator.validateEmptyText('Nome', value),
                   decoration: const InputDecoration(
                     prefixIcon: Icon(Iconsax.user),
                     labelText: 'Nome',
@@ -47,7 +47,7 @@ class AddNewAddressScreen extends StatelessWidget {
                       child: TextFormField(
                         controller: controller.street,
                         validator: (value) =>
-                            TValidator.validateEmptyText('Street', value),
+                            TValidator.validateEmptyText('Rua', value),
                         decoration: const InputDecoration(
                           labelText: 'Rua',
                           prefixIcon: Icon(Iconsax.building_31)),
@@ -56,8 +56,16 @@ class AddNewAddressScreen extends StatelessWidget {
                     const SizedBox(width: TSizes.spaceBtwInputFields),
                     Expanded(
                       child: TextFormField(
+                        controller: controller.numberHouse,
+                        validator: (value) => TValidator.validateEmptyText('Número da residência', value),
+                        decoration: const InputDecoration(labelText: 'N. Residência', prefixIcon: Icon(Iconsax.house)),
+                      ),
+                    ),
+                    const SizedBox(width: TSizes.spaceBtwInputFields),
+                    Expanded(
+                      child: TextFormField(
                         controller: controller.postalCode,
-                        validator: (value) => TValidator.validateEmptyText('Postal Code', value),
+                        validator: (value) => TValidator.validateEmptyText('Código postal', value),
                         decoration: const InputDecoration(labelText: 'Código Postal', prefixIcon: Icon(Iconsax.code)),
                       ),
                     ),
@@ -69,7 +77,7 @@ class AddNewAddressScreen extends StatelessWidget {
                     Expanded(
                       child: TextFormField(
                         controller: controller.city,
-                        validator: (value) => TValidator.validateEmptyText('City', value),
+                        validator: (value) => TValidator.validateEmptyText('Cidade', value),
                         expands: false,
                         decoration: const InputDecoration(
                           labelText: 'Cidade',
@@ -80,7 +88,7 @@ class AddNewAddressScreen extends StatelessWidget {
                     Expanded(
                       child: TextFormField(
                         controller: controller.state,
-                        validator: (value) => TValidator.validateEmptyText('State', value),
+                        validator: (value) => TValidator.validateEmptyText('Estado', value),
                         expands: false,
                         decoration: const InputDecoration(
                           labelText: 'Estado',
@@ -94,7 +102,7 @@ class AddNewAddressScreen extends StatelessWidget {
                 TextFormField(
                   controller: controller.country,
                   validator: (value) =>
-                      TValidator.validateEmptyText('Country', value),
+                      TValidator.validateEmptyText('País', value),
                   decoration: const InputDecoration(
                     prefixIcon: Icon(Iconsax.global),
                     labelText: 'País',
@@ -104,7 +112,7 @@ class AddNewAddressScreen extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () => controller.addNewAddresses, child: const Text('Salvar'),
+                    onPressed: () => controller.addNewAddresses(), child: const Text('Salvar'),
                   ),
                 ),
               ],

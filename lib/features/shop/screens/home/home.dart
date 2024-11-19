@@ -32,8 +32,6 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   THomeAppBar(),
                   SizedBox(height: TSizes.spaceBtwSections),
-                  TSearchContainer(text: 'Buscar produto', icon: Iconsax.search_normal),
-                  SizedBox(height: TSizes.spaceBtwSections),
                   Padding(
                     padding: EdgeInsets.only(left: TSizes.defaultSpace),
                     child: Column(

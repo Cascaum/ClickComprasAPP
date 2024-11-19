@@ -17,8 +17,8 @@ class TBrandShowcase extends StatelessWidget {
     super.key, required this.images, required this.brand,
   });
 
-  final List<String> images;
   final BrandModel brand;
+  final List<String> images;
 
   @override
   Widget build(BuildContext context) {

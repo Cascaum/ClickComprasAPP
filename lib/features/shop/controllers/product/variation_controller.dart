@@ -6,6 +6,7 @@ import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 
 import '../../models/product_model.dart';
 import '../../models/product_variation_model.dart';
+import 'cart_controller.dart';
 
 class VariationController extends GetxController {
   static VariationController get instance => Get.find();
@@ -25,6 +26,11 @@ class VariationController extends GetxController {
 
     if (selectedVariation.image.isNotEmpty) {
       ImagesController.instance.selectedProductImage.value = selectedVariation.image;
+    }
+
+    if (selectedVariation.id.isNotEmpty) {
+      final cartController = CartController.instance;
+      cartController.productQuantityInCart.value = cartController.getVariationQuantityInCart(product.id, selectedVariation.id);
     }
 
     this.selectedVariation.value = selectedVariation;

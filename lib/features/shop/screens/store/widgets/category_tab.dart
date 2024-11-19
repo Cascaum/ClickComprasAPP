@@ -50,9 +50,8 @@ class TCategoryTab extends StatelessWidget {
                     children: [
                       TSectionHeading(
                         title: 'Você pode gostar',
-                        onPressed: () => Get.to(
-                              () => AllProducts(
-                            title: 'Produtos Populares',
+                        onPressed: () => Get.to(AllProducts(
+                            title: category.name,
                             futureMethod: controller.getCategoryProducts(categoryId: category.id, limit: -1),
                           ),
                         ),

@@ -13,6 +13,7 @@ import 'package:iconsax/iconsax.dart';
 import '../../../../common/widgets/list_tiles/user_profile_tile.dart';
 import '../../../../data/repositories/authentication/authentication_repository.dart';
 import '../../../authentication/screens/login/login.dart';
+import '../../../shop/screens/cart/cart.dart';
 import '../address/adress.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -39,7 +40,7 @@ class SettingsScreen extends StatelessWidget {
                   const SizedBox(height: TSizes.spaceBtwItems),
 
                   TSettingsMenuTile(icon: Iconsax.safe_home, title: 'Meu endereço', subTitle: 'Endereço de entrega das compras', onTap: () => Get.to(() => const UserAddressScreen())),
-                  TSettingsMenuTile(icon: Iconsax.shopping_cart, title: 'Meu carrinho', subTitle: 'Adicionar, remover produtos e ir para o checkout', onTap: (){}),
+                  TSettingsMenuTile(icon: Iconsax.shopping_cart, title: 'Meu carrinho', subTitle: 'Adicionar, remover produtos e ir para o checkout', onTap: () => Get.to(() => const CartScreen())),
                   TSettingsMenuTile(icon: Iconsax.bag_tick, title: 'Minhas ordens de compra', subTitle: 'Ordens de compra realizadas', onTap: () => Get.to(() => const OrderScreen())),
                   TSettingsMenuTile(icon: Iconsax.bank, title: 'Conta bancária', subTitle: 'Retirar saldo para conta bancária cadastrada', onTap: (){}),
                   TSettingsMenuTile(icon: Iconsax.discount_shape, title: 'Meus cupons', subTitle: 'Lista de cupons com desconto', onTap: (){}),

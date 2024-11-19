@@ -24,7 +24,6 @@ class CategoryController extends GetxController {
   }
 
   Future<void> fetchCategories() async {
-    // Load category data
     try {
       isLoading.value = true;
       final categories = await _categoryRepository.getAllCategories();

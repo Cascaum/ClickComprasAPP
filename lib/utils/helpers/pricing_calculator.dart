@@ -1,3 +1,6 @@
+
+import '../../features/shop/models/cart_model.dart';
+
 class TPrincingCalculator {
 
   static double calculateTotalPrice(double productPrice, String location) {
@@ -27,5 +30,9 @@ class TPrincingCalculator {
 
   static double getShippingCost(String location) {
     return 5.00;
+  }
+
+  static double calculateCartTotal(CartModel cart) {
+    return cart.items.map((e) => e.price).fold(0, (previousPrice, currentPrice) => previousPrice + (currentPrice ?? 0));
   }
 }

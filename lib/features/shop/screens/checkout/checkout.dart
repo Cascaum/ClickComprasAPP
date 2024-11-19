@@ -7,6 +7,8 @@ import 'package:clickcompras/features/shop/screens/checkout/widgets/billing_paym
 import 'package:clickcompras/navigation_menu.dart';
 import 'package:clickcompras/utils/constants/colors.dart';
 import 'package:clickcompras/utils/constants/image_strings.dart';
+import 'package:clickcompras/utils/helpers/pricing_calculator.dart';
+import 'package:clickcompras/utils/popups/loaders.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -15,12 +17,19 @@ import '../../../../common/widgets/products/cart/coupon_widget.dart';
 import '../../../../common/widgets/success_screen/success_screen.dart';
 import '../../../../utils/constants/sizes.dart';
 import '../../../../utils/helpers/helper_functions.dart';
+import '../../controllers/product/cart_controller.dart';
+import '../../controllers/product/order_controller.dart';
 
 class CheckoutScreen extends StatelessWidget {
   const CheckoutScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final cartController = CartController.instance;
+    final subTotal = cartController.totalCartPrice.value;
+    final orderController = Get.put(OrderController());
+    final totalAmount = TPrincingCalculator.calculateTotalPrice(subTotal, 'BR');
+
     final dark = THelperFunctions.isDarkMode(context);
     return Scaffold(
       appBar: TAppBar(
@@ -55,7 +64,6 @@ class CheckoutScreen extends StatelessWidget {
                   SizedBox(height: TSizes.spaceBtwSections),
 
                   TBillingAddressSection(),
-                  SizedBox(height: TSizes.spaceBtwSections),
                 ],
               ),
             )
@@ -65,13 +73,10 @@ class CheckoutScreen extends StatelessWidget {
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(TSizes.defaultSpace),
         child: ElevatedButton(
-          onPressed: () => Get.to(() => SuccessScreen(
-            image: TImages.successfulPaymentIcon,
-            title: 'Pago com sucesso!',
-            subTitle: 'Seu item já está sendo preparado!',
-            onPressed: () => Get.offAll(() => const NavigationMenu()),
-          )),
-          child: const Text('Total: R\$ 950.00'),
+          onPressed: subTotal > 0
+              ? () => orderController.processOrder(totalAmount)
+              : () => TLoaders.warningSnackBar(title: 'Carrinho vazio', message: 'Adicione itens ao carrinho para processar a ordem de compra.'),
+          child: Text('Total: R\$${TPrincingCalculator.calculateTotalPrice(subTotal, 'BR')}'),
         ),
       ),
     );

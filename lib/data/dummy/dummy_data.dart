@@ -20,54 +20,6 @@ class TDummyData {
     BannerModel(imageUrl: TImages.promoBanner4, targetScreen: TRoutes.checkout, active: false),
   ];
 
-  /// -- User
-  // static final UserModel user = UserModel(
-  //   firstName: 'Rafael',
-  //   lastName: 'Araujo',
-  //   email: 'rafael.araujo@unifebe.edu.br',
-  //   phoneNumber: '+47984470854',
-  //   profilePicture: TImages.user,
-  //   addresses: [
-  //     AddressModel(
-  //         id: '1',
-  //         name: 'Rafael de Araujo',
-  //         phoneNumber: '+92317805928',
-  //         street: '984 , Rua Alberto Muller, Limeira Baixa',
-  //         city: 'Brusque',
-  //         state: 'Santa Catarina',
-  //         postalCode: '88356001',
-  //         country: 'BRA'
-  //     ),
-  //   ],
-  // );
-  //
-  // static final CartModel cart = CartModel(
-  //   cartId: '001',
-  //   items: [
-  //     CartItemModel(
-  //       productId: '001',
-  //       variationId: '1',
-  //       quantity: 1,
-  //       title: products[0].title,
-  //       image: products[0].thumbnail,
-  //       brandName: products[0].brand!.name,
-  //       price: products[0].productVariations![0].price,
-  //       selectedVariation: products[0].productVariations![0].attributeValues,
-  //     ),
-  //   ],
-  // );
-  //
-  // static final List<OrderModel> orders = [
-  //   OrderModel(
-  //     id: 'CWT0012',
-  //     status: OrderStatus.processing,
-  //     items: cart.items,
-  //     totalAmount: 265,
-  //     orderDate: DateTime(2023, 09, 1),
-  //     deliveryDate: DateTime(2023, 09, 9),
-  //   ),
-  // ];
-
   static final List<CategoryModel> categories = [
     CategoryModel(id: '1', image: TImages.sportIcon, name: 'Esportes', isFeatured: true),
     CategoryModel(id: '5', image: TImages.furnitureIcon, name: 'Móveis', isFeatured: true),

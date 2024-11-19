@@ -38,7 +38,6 @@ class StoreScreen extends StatelessWidget {
           ),
           actions: [
             TCartCounterIcon(
-              onPressed: () {},
               iconColor: theme.brightness == Brightness.dark ? Colors.white : Colors.black,
             ),
           ],
@@ -59,13 +58,6 @@ class StoreScreen extends StatelessWidget {
                     physics: const NeverScrollableScrollPhysics(),
                     children: [
                       const SizedBox(height: TSizes.spaceBtwItems),
-                      const TSearchContainer(
-                        text: 'Procure na loja',
-                        showBorder: true,
-                        showBackground: false,
-                        padding: EdgeInsets.zero,
-                      ),
-                      const SizedBox(height: TSizes.spaceBtwSections),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
