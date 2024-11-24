@@ -1,6 +1,6 @@
 # clickcompras
-
-A new Flutter project.
+Estudantes: Bruno B. Hein, Pedro H. de Oliveira e Rafael de A. da Silva.
+Projeto desenvolvido com fundamento de ser utilizado para atividade prática supervisionada da matéria projeto de analise e do curso de sistemas da informação do sexto semestre do centro universitário de Brusque - UNIFEBE
 
 ## Getting Started
 
