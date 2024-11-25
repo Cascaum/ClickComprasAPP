@@ -200,5 +200,6 @@ class TDummyData {
       ],
       productType: 'ProductType.variable',
     ),
+
   ];
 }

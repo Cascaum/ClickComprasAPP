@@ -59,7 +59,7 @@ class OrderController extends GetxController {
       cartController.clearCart();
 
       Get.off(() => SuccessScreen(
-        image: TImages.orderCompletedAnimation,
+        image: TImages.staticSuccessIllustration,
         title: 'Pagamento efetuado com sucesso!',
         subTitle: 'Seu item será enviado em breve!',
         onPressed: () => Get.offAll(() => const NavigationMenu()),

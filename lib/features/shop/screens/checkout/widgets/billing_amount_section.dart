@@ -40,12 +40,12 @@ class TBillingAmountSection extends StatelessWidget {
           ],
         ),
         const SizedBox(height: TSizes.spaceBtwSections / 2),
-
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text('Total da ordem', style: Theme.of(context).textTheme.bodyMedium),
-            Text('R\$${TPrincingCalculator.calculateTotalPrice(subTotal, 'BR')}', style: Theme.of(context).textTheme.labelLarge),
+            Text('R\$${TPrincingCalculator.calculateTotalPrice(subTotal, 'BR')}',
+                style: Theme.of(context).textTheme.labelLarge),
           ],
         ),
         const SizedBox(height: TSizes.spaceBtwSections / 2),

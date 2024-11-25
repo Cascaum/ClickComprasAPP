@@ -31,6 +31,7 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -44,4 +45,16 @@ android {
 
 flutter {
     source = "../.."
+}
+
+dependencies {
+    // Testes unitários
+    testImplementation 'junit:junit:4.13.2' // Última versão do JUnit 4
+
+    androidTestImplementation 'androidx.test:runner:1.5.2' // Atualizado
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1' // Atualizado
+    androidTestImplementation 'androidx.test:rules:1.5.0'
+    androidTestImplementation 'dev.flutter:flutter_test:5.0.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5' // Suporte ao JUnit 4
+    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.5.1' // Para interações adicionais
 }

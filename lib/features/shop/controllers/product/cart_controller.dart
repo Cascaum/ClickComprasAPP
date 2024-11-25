@@ -36,12 +36,12 @@ class CartController extends GetxController {
 
     if (product.productType == ProductType.variable.toString()) {
       if (variationController.selectedVariation.value.stock < 1) {
-        TLoaders.warningSnackBar(message: 'Selected variation is out of stock', title: 'Oh Snap!');
+        TLoaders.warningSnackBar(message: 'Selecione um tamanho que possua estoque', title: 'Ocorreu um erro!');
         return;
       }
     } else {
       if (product.stock < 1) {
-        TLoaders.warningSnackBar(title: 'Ocorreu um erro!', message: 'Selecioneu um produto que possua estoque');
+        TLoaders.warningSnackBar(title: 'Ocorreu um erro!', message: 'Selecione um produto que possua estoque');
         return;
       }
     }

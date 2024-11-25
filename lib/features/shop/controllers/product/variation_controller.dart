@@ -63,7 +63,7 @@ class VariationController extends GetxController {
 
   void getProductVariationStockStatus() {
     variationStockStatus.value =
-    selectedVariation.value.stock > 0 ? 'In Stock' : 'Out of Stock';
+    selectedVariation.value.stock > 0 ? 'Em estoque' : 'Fora de estoque';
   }
 
   void resetSelectedAttributes() {

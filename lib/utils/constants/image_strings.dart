@@ -8,6 +8,7 @@ class TImages {
   static const String adidasLogo = "assets/icons/brands/adidas-logo.png";
   static const String appleLogo = "assets/icons/brands/apple-logo.png";
   static const String jordanLogo = "assets/icons/brands/jordan-logo.png";
+  static const String sansungLogo = "assets/icons/brands/sansung.png";
   static const String pumaLogo = "assets/icons/brands/puma-logo.png";
   static const String zaraLogo = "assets/icons/brands/zara-logo.png";
   static const String kenwoodLogo = "assets/icons/brands/kenwood-logo.png";
@@ -34,7 +35,7 @@ class TImages {
   static const String pencilAnimation = "assets/images/animations/140429-pencil-drawing.json";
   static const String cartAnimation = "assets/images/animations/136491-animation-lottie-car-rides.json";
   static const String orderCompletedAnimation = "assets/images/animations/order-complete-car-delivery-animation.json";
-
+  static const String cartAnimationSuccess = "assets/images/animations/cartpackageAnimation.json";
   // -- Category Icons
   static const String sportIcon = "assets/icons/categories/icons8-bowling-64.png";
   static const String clothIcon = "assets/icons/categories/icons8-tailors-dummy-64.png";

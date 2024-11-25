@@ -15,7 +15,7 @@ class ReAuthLoginForm extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = UserController.instance;
     return Scaffold(
-      appBar: AppBar(title: const Text('Re-Authenticate User')),
+      appBar: AppBar(title: const Text('Exclusão da conta de usuário')),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(TSizes.defaultSpace),
@@ -53,7 +53,7 @@ class ReAuthLoginForm extends StatelessWidget {
 
                 SizedBox(
                   width: double.infinity,
-                  child: ElevatedButton(onPressed: () => controller.reAuthenticateEmailAndPasswordUser(), child: const Text('Verify')),
+                  child: ElevatedButton(onPressed: () => controller.reAuthenticateEmailAndPasswordUser(), child: const Text('Excluir')),
                 )
 
               ],
